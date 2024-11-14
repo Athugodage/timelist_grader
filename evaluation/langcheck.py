@@ -10,7 +10,7 @@ import re
 
 
 perplexity = load("perplexity", module_type="metric")
-protocol_clf = joblib.load(f'evaluation/classifier/case5grams_large.pkl')
+protocol_clf = joblib.load(f'timelist_grader/evaluation/classifier/case5grams_large.pkl')
 
 
 def check_mistakes(text2check, correctedtext, row_id):
