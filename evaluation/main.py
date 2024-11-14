@@ -19,7 +19,7 @@ if __name__ == "__main__":
     parser.add_argument('--llm',
                         type=str,
                         help='Result file',
-                        default='mistralai/Mistral-7B-Instruct-v0.2')
+                        default='Vikhrmodels/Vikhr-Qwen-2.5-0.5b-Instruct')
 
     args = parser.parse_args()
 
@@ -28,5 +28,5 @@ if __name__ == "__main__":
                         llm2score=args.llm
                         )
 
-    with open(f'reports/{args.path4report}', 'w') as wp:
+    with open(f'{args.path4report}', 'w') as wp:
         json.dump(report, wp)

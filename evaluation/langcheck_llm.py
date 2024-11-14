@@ -18,7 +18,7 @@ def getLLMscore(model_name='mistralai/Mistral-7B-Instruct-v0.2',
                 ):
     #'mistralai/Mistral-Nemo-Instruct-2407'
 
-    llm = LLM(model=model_name)
+    llm = LLM(model=model_name, dtype='float16')
     sampling_params = SamplingParams(temperature=temperature,
                                      min_tokens=1,
                                      max_tokens=20,
